@@ -12,9 +12,10 @@ module.exports = function (input, options) {
 	options = options || {};
 
 	var exclude = options.exclude || [];
+	var deep = options.deep || false;
 
 	return mapObj(input, function (key, val) {
 		key = has(exclude, key) ? key : camelCase(key);
 		return [key, val];
-	});
+	}, {deep: deep});
 };
