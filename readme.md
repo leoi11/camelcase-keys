@@ -1,12 +1,27 @@
-# camelcase-keys [![Build Status](https://travis-ci.org/sindresorhus/camelcase-keys.svg?branch=master)](https://travis-ci.org/sindresorhus/camelcase-keys)
+# camelcase-keys (forked)
 
 > Convert object keys to camelCase using [`camelcase`](https://github.com/sindresorhus/camelcase)
+
+## About this fork
+This fork diverges from the author's repo,
+and only included a very useful feature provided
+in the original package added in v4.0.0.
+
+There were another breaking change in v4.0.0
+which is upgrading to es6:
+When used by our react app, we don't transpile
+es6 in the node_modules dir.
+When the es6 syntax is read by Uglify,
+things break.
+
+Therefore, our solution is to maintain our own fork
+without the breaking change.
 
 
 ## Install
 
 ```
-$ npm install --save camelcase-keys
+$ npm install --save https://github.com/leoi11/camelcase-keys
 ```
 
 
